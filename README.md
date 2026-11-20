@@ -1,6 +1,6 @@
 # DiGAS-experiments
 
-Code and results of the additional analyses run in November 2026 for the DiGAS paper, at the request of the editor and an additional reviewer.
+Code and results of the additional analyses run in 2026 for the DiGAS paper, at the request of the editor and an additional reviewer.
 
 The analyses cover:
 - **Validation:** region selection inside cross-validation (nested) versus on the whole cohort (as in the paper).
