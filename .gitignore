@@ -1,0 +1,29 @@
+# ADNI data: request access at adni.loni.usc.edu, never commit
+ADNI*_QC.*
+ADNI2/
+ADNI3/
+pheno/
+plink
+# environments and downloaded public annotation
+.venv/
+.r-env/
+annotation/
+__pycache__/
+*.pyc
+# intermediate outputs and anything with subject IDs
+results/**/checkpoints/
+results/**/nested_work/
+results/**/details/
+results/**/coords_*.csv
+results/**/subjects.csv
+results/**/pc1_small_group.csv
+results/snp_variability/plink/
+results/snp_variability/snp_by_group.csv.gz
+results/tool_comparison/*/
+!results/tool_comparison/selection_all/
+results/tool_comparison/*.log
+results/tool_comparison/*.done
+results/tool_comparison/*.time
+results/tool_comparison/queue.*
+results/unsupervised_tools/*.log
+results/internal_indices*

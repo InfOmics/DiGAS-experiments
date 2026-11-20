@@ -1,0 +1,95 @@
+== overlap of selected regions
+Dataset              Region Contrast  N_tested  DiGAS  SKAT  Common  Expected    Fold  Hypergeom_p  Jaccard  Overlap_coef  Expected_size_strat  Fold_size_strat
+  ADNI1             exon_5k    CN-AD     44170    685  2290     379   35.5139 10.6719          0.0   0.1460        0.5533              35.4849          10.6806
+  ADNI1             exon_5k   CN-MCI     44170    683  2259     340   34.9309  9.7335          0.0   0.1307        0.4978              34.9346           9.7325
+  ADNI1             exon_5k    union     44170   1276  4056     694  117.1713  5.9230          0.0   0.1496        0.5439             117.0899           5.9271
+  ADNI2             exon_5k    CN-AD     46289    728  2239     348   35.2134  9.8826          0.0   0.1329        0.4780              35.2713           9.8664
+  ADNI2             exon_5k   CN-MCI     46289    785  2389     357   40.5143  8.8117          0.0   0.1267        0.4548              40.4510           8.8255
+  ADNI2             exon_5k    union     46289   1440  4248     715  132.1506  5.4105          0.0   0.1438        0.4965             132.2062           5.4082
+  ADNI3             exon_5k    CN-AD     36110    520  1446     211   20.8230 10.1330          0.0   0.1202        0.4058              20.6126          10.2365
+  ADNI3             exon_5k   CN-MCI     36110    556  1728     295   26.6067 11.0874          0.0   0.1483        0.5306              26.5766          11.1000
+  ADNI3             exon_5k    union     36110   1046  3078     518   89.1606  5.8097          0.0   0.1436        0.4952              88.5890           5.8472
+  ADNI1                exon    CN-AD     18141    294   912     197   14.7802 13.3286          0.0   0.1952        0.6701              14.8843          13.2355
+  ADNI1                exon   CN-MCI     18141    278   882     194   13.5161 14.3532          0.0   0.2008        0.6978              13.5655          14.3010
+  ADNI1                exon    union     18141    532  1614     376   47.3319  7.9439          0.0   0.2124        0.7068              47.4555           7.9232
+  ADNI1 exon_protein_coding    CN-AD     10988    173   541     109    8.5177 12.7968          0.0   0.1802        0.6301               8.5638          12.7279
+  ADNI1 exon_protein_coding   CN-MCI     10988    170   513     111    7.9368 13.9854          0.0   0.1941        0.6529               8.0681          13.7578
+  ADNI1 exon_protein_coding    union     10988    316   943     210   27.1194  7.7435          0.0   0.2002        0.6646              27.3765           7.6708
+
+== Spearman of p-values over all tested regions
+Dataset              Region Contrast     N  Spearman_p  Spearman_pval
+  ADNI1             exon_5k    CN-AD 44170      0.4116            0.0
+  ADNI1             exon_5k   CN-MCI 44170      0.4147            0.0
+  ADNI2             exon_5k    CN-AD 46289      0.3827            0.0
+  ADNI2             exon_5k   CN-MCI 46289      0.3794            0.0
+  ADNI3             exon_5k    CN-AD 36110      0.4456            0.0
+  ADNI3             exon_5k   CN-MCI 36110      0.4491            0.0
+  ADNI1                exon    CN-AD 18141      0.5618            0.0
+  ADNI1                exon   CN-MCI 18141      0.5526            0.0
+  ADNI1 exon_protein_coding    CN-AD 10988      0.5216            0.0
+  ADNI1 exon_protein_coding   CN-MCI 10988      0.5038            0.0
+
+== top-k overlap (CN-AD)
+Dataset              Region Contrast  Top_k  Common  Expected   Fold
+  ADNI1             exon_5k    CN-AD     50      10      0.06 176.68
+  ADNI1             exon_5k    CN-AD    100      23      0.23 101.59
+  ADNI1             exon_5k    CN-AD    250      72      1.41  50.88
+  ADNI1             exon_5k    CN-AD    500     154      5.66  27.21
+  ADNI1             exon_5k    CN-AD   1000     336     22.64  14.84
+  ADNI1             exon_5k    CN-AD   2000     722     90.56   7.97
+  ADNI2             exon_5k    CN-AD     50       9      0.05 166.64
+  ADNI2             exon_5k    CN-AD    100      24      0.22 111.09
+  ADNI2             exon_5k    CN-AD    250      62      1.35  45.92
+  ADNI2             exon_5k    CN-AD    500     128      5.40  23.70
+  ADNI2             exon_5k    CN-AD   1000     288     21.60  13.33
+  ADNI2             exon_5k    CN-AD   2000     679     86.41   7.86
+  ADNI3             exon_5k    CN-AD     50       3      0.07  43.33
+  ADNI3             exon_5k    CN-AD    100      10      0.28  36.11
+  ADNI3             exon_5k    CN-AD    250      45      1.73  26.00
+  ADNI3             exon_5k    CN-AD    500     106      6.92  15.31
+  ADNI3             exon_5k    CN-AD   1000     276     27.69   9.97
+  ADNI3             exon_5k    CN-AD   2000     704    110.77   6.36
+  ADNI1                exon    CN-AD     50      16      0.14 116.10
+  ADNI1                exon    CN-AD    100      38      0.55  68.94
+  ADNI1                exon    CN-AD    250     103      3.45  29.90
+  ADNI1                exon    CN-AD    500     226     13.78  16.40
+  ADNI1                exon    CN-AD   1000     492     55.12   8.93
+  ADNI1                exon    CN-AD   2000    1078    220.50   4.89
+  ADNI1 exon_protein_coding    CN-AD     50      13      0.23  57.14
+  ADNI1 exon_protein_coding    CN-AD    100      38      0.91  41.75
+  ADNI1 exon_protein_coding    CN-AD    250     101      5.69  17.76
+  ADNI1 exon_protein_coding    CN-AD    500     220     22.75   9.67
+  ADNI1 exon_protein_coding    CN-AD   1000     504     91.01   5.54
+  ADNI1 exon_protein_coding    CN-AD   2000    1117    364.03   3.07
+
+== cross-cohort (exon_5k)
+       Pair    Set  N_tested  N_first  N_second  Common  Expected   Fold  Hypergeom_p  Jaccard  Overlap_coef
+ADNI1-ADNI2  DiGAS     40564     1155      1257      41   35.7912 1.1455       0.2060   0.0173        0.0355
+ADNI1-ADNI2   SKAT     40564     3709      3688     340  337.2151 1.0083       0.4430   0.0482        0.0922
+ADNI1-ADNI2 Common     40564      598       574      12    8.4620 1.4181       0.1450   0.0103        0.0209
+ADNI1-ADNI3  DiGAS     32304      919       950      33   27.0261 1.2210       0.1399   0.0180        0.0359
+ADNI1-ADNI3   SKAT     32304     2921      2768     217  250.2888 0.8670       0.9913   0.0397        0.0784
+ADNI1-ADNI3 Common     32304      433       449       1    6.0184 0.1662       0.9978   0.0011        0.0023
+ADNI2-ADNI3  DiGAS     33852     1022       989      37   29.8581 1.2392       0.1076   0.0187        0.0374
+ADNI2-ADNI3   SKAT     33852     3090      2886     284  263.4332 1.0781       0.0885   0.0499        0.0984
+ADNI2-ADNI3 Common     33852      427       473      10    5.9663 1.6761       0.0789   0.0112        0.0234
+
+== regions selected in all three cohorts: DiGAS 1, SKAT 21, Common 0
+
+== unsupervised on subsets (CN+AD)
+Dataset         Set  Regions  SNPs  kNN10_excess  Best_ARI  Random_kNN_mean  Random_kNN_max  Random_ARI_max
+  ADNI1      Common      694  1803         0.177     0.299           -0.001           0.005           0.008
+  ADNI1  DiGAS-only      582  4047         0.113     0.001           -0.002           0.010           0.020
+  ADNI1   SKAT-only     3362 15323         0.145    -0.001            0.003           0.017           0.004
+  ADNI1 DiGAS (all)     1276  5815         0.179     0.326            0.000           0.010           0.002
+  ADNI1  SKAT (all)     4056 16960         0.158     0.209           -0.004           0.005           0.002
+  ADNI2      Common      715  2041         0.160    -0.001           -0.006           0.009           0.007
+  ADNI2  DiGAS-only      725  5376         0.119     0.113           -0.010           0.015           0.008
+  ADNI2   SKAT-only     3533 19199         0.101     0.011            0.002           0.016           0.010
+  ADNI2 DiGAS (all)     1440  7344         0.168     0.704           -0.001           0.005           0.003
+  ADNI2  SKAT (all)     4248 21008         0.122     0.014            0.003           0.016           0.020
+  ADNI3      Common      518  1032         0.084     0.050           -0.009           0.007           0.060
+  ADNI3  DiGAS-only      528  2726         0.062    -0.013            0.007           0.020           0.022
+  ADNI3   SKAT-only     2560  7692         0.069    -0.023           -0.008           0.011           0.050
+  ADNI3 DiGAS (all)     1046  3722         0.089    -0.034           -0.011          -0.001           0.002
+  ADNI3  SKAT (all)     3078  8625         0.080    -0.003           -0.005           0.010           0.010

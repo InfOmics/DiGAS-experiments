@@ -1,0 +1,42 @@
+PC1 (0.559%): top chr 6 share 0.095, 2nd chr 1 0.088, max single-SNP share 0.0040
+PC2 (0.463%): top chr 8 share 0.280, 2nd chr 6 0.105, max single-SNP share 0.0166
+PC3 (0.436%): top chr 8 share 0.246, 2nd chr 23 0.079, max single-SNP share 0.0138
+
+== all (CN/MCI/AD), clustering ARI k=3
+Algorithm        GMM  KMeans    Ward
+Set                                 
+DiGAS         0.0186  0.0186  0.0151
+DiGAS-chr15   0.0865  0.0047  0.0190
+Random@DiGAS  0.0050  0.0039  0.0034
+-- 10-NN agreement excess
+Space          PCA50   PCA2D  tSNE2D  UMAP2D
+Set                                         
+DiGAS         0.1429  0.1037  0.0674  0.0531
+DiGAS-chr15   0.1362  0.1298  0.0860  0.0716
+Random@DiGAS  0.0029 -0.0086  0.0010 -0.0086
+-- silhouette of true states
+Space          PCA50   PCA2D
+Set                         
+DiGAS         0.0116 -0.0063
+DiGAS-chr15   0.0114  0.0161
+Random@DiGAS -0.0030 -0.0231
+
+== CN_AD (CN/AD), clustering ARI k=2
+Algorithm        GMM  KMeans    Ward
+Set                                 
+DiGAS        -0.0031 -0.0031 -0.0017
+DiGAS-chr15   0.0176  0.8319 -0.0050
+Random@DiGAS -0.0022 -0.0018 -0.0048
+-- 10-NN agreement excess
+Space          PCA50   PCA2D  tSNE2D  UMAP2D
+Set                                         
+DiGAS         0.1790  0.3497  0.1536  0.1341
+DiGAS-chr15   0.1905  0.3979  0.1933  0.2256
+Random@DiGAS -0.0004  0.0015  0.0070 -0.0084
+-- silhouette of true states
+Space          PCA50   PCA2D
+Set                         
+DiGAS         0.0214  0.2646
+DiGAS-chr15   0.0220  0.3671
+Random@DiGAS -0.0003 -0.0038
+

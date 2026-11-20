@@ -1,0 +1,73 @@
+ADNI1 exon_5k, CN+AD: 365 subjects (197 CN, 168 AD); DiGAS 1276 regions, 5815 SNPs
+k-means on 50 PCs: ARI k=2 -0.003, k=3 0.326  (using k=3 below)
+
+PCs vs state (Mann-Whitney/KW p) and variance explained, top 5 by p:
+  PC2: p = 2.1e-48, var 0.804%
+  PC3: p = 4.3e-11, var 0.641%
+  PC4: p = 0.00035, var 0.623%
+  PC1: p = 0.0059, var 0.958%
+  PC5: p = 0.0063, var 0.581%
+cluster vs sign of PC2: ARI 0.338; state vs PC2>median: ARI 0.566
+
+Cluster x State: chi2 p = 3.11e-39
+Cluster   0    1    2
+State                
+AD       50  103   15
+CN       66    5  126
+
+Cluster x Sex: chi2 p = 0.401
+Cluster   0   1   2
+Sex                
+F        50  44  69
+M        66  64  72
+
+Cluster x Site: chi2 p = 0.802
+(52 sites)
+
+Missing_rate: medians by cluster 0.00092, 0.00079, 0.00075
+Het_rate: medians by cluster 0.34422, 0.34337, 0.34521
+
+PC2 concentration: top-10 SNPs hold 2.0%, top-100 13.3%; SNPs needed for 50% 697, 90% 2577 of 5815; effective number of SNPs 1879
+top chromosome share 7.9% (chr 1, 480 SNPs = 8.3% of SNPs)
+regions needed for 50% of PC2: 165, 90%: 854 of 1988
+top 10 regions:
+                      chr  SNPs   Share  min_Fisher_p
+Region                                               
+ENSG00000120915.14_10   8    64  0.0497        0.0049
+ENSG00000131018.24_7    6   247  0.0304        0.0024
+ENSG00000237636.3_7    13    17  0.0265        0.0012
+ENSG00000123636.18_7    2    51  0.0213        0.0050
+ENSG00000065413.20_8    2    26  0.0191        0.0040
+ENSG00000106125.14_8    7    26  0.0187        0.0007
+ENSG00000254959.6_7     7    25  0.0178        0.0007
+ENSG00000225937.3_7     9    37  0.0166        0.0032
+ENSG00000039139.9_6     5   127  0.0144        0.0145
+ENSG00000175029.17_8   10    52  0.0142        0.0005
+
+SNPs with Fisher p < 0.05 for CN vs AD: 21.7% (null ~5%), p < 1e-3: 61, p < 1e-6: 0
+Spearman(signed PC2 loading, AD-CN carrier difference) = 0.841 (p 0)
+label-aligned score: corr(PC2, sum over SNPs of sign(AD-CN diff)*carrier) = 0.872
+
+ablation (k-means ARI vs CN/AD, k=2 / k=3):
+                       Removed  Regions  ARI_k2  ARI_k3
+                         top 0     1276  -0.003   0.326
+                         top 1     1275  -0.003   0.307
+                        top 10     1266  -0.003   0.368
+                        top 50     1229   0.812   0.616
+                       top 100     1184   0.872   0.586
+                       top 300     1011   0.471   0.409
+                 random half 1      638  -0.003  -0.000
+                 random half 2      638  -0.003   0.001
+                 random half 3      638   0.023   0.099
+                 random half 4      638   0.029   0.081
+                 random half 5      638  -0.003   0.001
+              DiGAS CN-AD only      685   0.812   0.497
+             DiGAS CN-MCI only      683  -0.003   0.001
+DiGAS CN-AD + CN-MCI (as used)     1276  -0.003   0.326
+               SKAT CN-AD only     2290  -0.000   0.696
+              SKAT CN-MCI only     2259  -0.002   0.040
+ SKAT CN-AD + CN-MCI (as used)     4056  -0.002   0.209
+
+|corr| of DiGAS PC2 with AllRegions PC1..PC5: 0.552, 0.037, 0.116, 0.075, 0.008
+AllRegions PC1..PC5 vs state (Mann-Whitney p): 0.26, 0.11, 0.16, 0.12, 0.44
+AllRegions k-means ARI: k=2 -0.004, k=3 -0.004

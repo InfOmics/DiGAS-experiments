@@ -1,0 +1,73 @@
+DiGAS exon_5k: 1276 regions, 5815 SNPs, 704 subjects
+PC1 explains 0.752%, PC2 0.550%
+groups (GMM on PC1): left 186, right 518
+
+Group x State: chi2 p = 0.00505
+Group  left  right
+State             
+AD       50    118
+CN       65    132
+MCI      71    268
+
+Group x Sex: chi2 p = 0.149
+Group  left  right
+Sex               
+F        83    198
+M       103    320
+
+Group x Site (52 sites): chi2 p = 0.017
+
+Missing_rate: left median 0.00095, right median 0.00082, Mann-Whitney p = 0.148
+Het_rate: left median 0.34445, right median 0.34325, Mann-Whitney p = 0.209
+
+PC1 share by chromosome (sum of squared loadings, top 8):
+     SNPs  PC1_share
+chr                 
+15    194     0.7594
+6     463     0.0247
+1     480     0.0215
+2     403     0.0204
+5     414     0.0169
+3     289     0.0150
+12    409     0.0145
+7     334     0.0138
+
+top-50 PC1 SNPs by chromosome (span):
+          min       max  size
+chr                          
+15   58245986  58356362    50
+
+top regions by PC1 share:
+                      chr      start        end  SNPs  PC1_share  max_absdiff
+Region                                                                       
+ENSG00000128918.15_7   15   58245986   58791354   147     1.5802       0.9981
+ENSG00000274719.1_7    15   58284657   58287526     5     0.0893       0.9981
+ENSG00000259285.1_6    15   58353037   58356362     4     0.0632       0.9981
+ENSG00000151914.20_13   6   56327849   56823425    65     0.0133       0.0931
+ENSG00000131018.24_7    6  152444815  152963826   247     0.0087       0.0920
+ENSG00000173210.20_5    5  148559909  148633744    31     0.0063       0.0970
+ENSG00000266714.9_10   17   73581599   73616088   127     0.0055       0.1115
+ENSG00000204310.13_7    6   32138545   32149816    39     0.0050       0.1125
+ENSG00000039139.9_6     5   13701536   13944512   127     0.0049       0.0855
+ENSG00000159173.19_9    1  201373844  201401025    29     0.0049       0.1167
+ENSG00000258388.7_5     6   32120715   32138545    56     0.0048       0.0959
+ENSG00000165325.14_7   11   93059444   93166368    26     0.0047       0.1061
+ENSG00000080573.7_6    19   10071063   10120571    68     0.0046       0.1291
+ENSG00000204308.8_5     6   32141883   32147761    23     0.0045       0.1125
+ENSG00000115677.17_9    2  242167337  242245570    39     0.0045       0.0777
+
+SNPs with Fisher p < 1e-10 between groups: 52; |carrier-freq diff| > 0.5: 34
+
+cross-validated accuracy predicting left/right (logistic regression; SNPs ranked by PC1 loading on all subjects, so mildly optimistic):
+  top   1 SNPs: 0.956
+  top   3 SNPs: 0.956
+  top  10 SNPs: 0.996
+  top  30 SNPs: 0.997
+  top 100 SNPs: 0.997
+  only region ENSG00000128918.15_7 (79 SNPs): 0.997
+  majority class baseline: 0.736
+
+same subjects split along PC1 of other sets? (ARI between DiGAS groups and a GMM split of that set's PC1)
+  SKAT: ARI -0.038; |corr(PC1, DiGAS PC1)| 0.204; contains 1/10 of DiGAS's top PC1 regions
+  Random@DiGAS d0: ARI -0.033; |corr(PC1, DiGAS PC1)| 0.187; contains 0/10 of DiGAS's top PC1 regions
+  AllRegions: ARI -0.029; |corr(PC1, DiGAS PC1)| 0.231; contains 10/10 of DiGAS's top PC1 regions
